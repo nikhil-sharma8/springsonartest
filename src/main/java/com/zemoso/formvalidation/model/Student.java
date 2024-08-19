@@ -31,7 +31,7 @@ public class Student {
     @NotNull(message = "Please enter a valid percentage")
     private Double aggregatePercentage;
 
-    @Gender
+    @Gender     //Custom validator
     private Character gender;
 
     @NotNull
