@@ -10,7 +10,9 @@
     <properties>
         <sonar.organization>nikhilzemoso</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-        <sonar.projectKey>nikhilzemoso_springsonar</sonar.projectKey>
+        <sonar.projectKey>nikhilzemoso_springsonartest</sonar.projectKey>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -96,7 +98,6 @@
             <artifactId>jacoco-maven-plugin</artifactId>
             <version>0.8.12</version>
         </dependency>
-
     </dependencies>
 
   <build>
