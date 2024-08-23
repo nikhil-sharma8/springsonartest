@@ -15,14 +15,13 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         
     </properties>
-
     <dependencies>
       <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
-<dependency>
-    <groupId>org.sonarsource.scanner.maven</groupId>
-    <artifactId>sonar-maven-plugin</artifactId>
-    <version>3.9.0.2155</version>
-</dependency>
+    <dependency>
+        <groupId>org.sonarsource.scanner.maven</groupId>
+        <artifactId>sonar-maven-plugin</artifactId>
+        <version>3.9.0.2155</version>
+    </dependency>
 
       <dependency>
           <groupId>junit</groupId>
@@ -44,7 +43,6 @@
             <version>5.3.1</version>
             <scope>test</scope>
         </dependency>
-g
         <dependency>
           <groupId>org.springframework</groupId>
           <artifactId>spring-core</artifactId>
@@ -77,13 +75,11 @@ g
           <artifactId>spring-webmvc</artifactId>
           <version>5.3.9</version>
       </dependency>
-
       <dependency>
           <groupId>org.hibernate.validator</groupId>
           <artifactId>hibernate-validator</artifactId>
           <version>6.2.4.Final</version>
       </dependency>
-
       <!-- Bean Validation API Dependency -->
       <dependency>
           <groupId>javax.validation</groupId>
@@ -95,7 +91,6 @@ g
           <artifactId>hibernate-core</artifactId>
           <version>5.1.0.Final</version>
       </dependency>
-
       <dependency>
           <groupId>org.slf4j</groupId>
           <artifactId>slf4j-api</artifactId>
@@ -121,7 +116,6 @@ g
             <version>0.8.12</version>
         </dependency>
     </dependencies>
-  
   <build>
     <finalName>FormValidation</finalName>
   </build>
