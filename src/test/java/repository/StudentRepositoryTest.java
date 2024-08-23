@@ -1,24 +1,29 @@
+package repository;
+
 import com.zemoso.formvalidation.model.Student;
 import com.zemoso.formvalidation.repository.StudentRepository;
-import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
+import org.mockito.MockitoAnnotations;
 import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
 
 import static org.junit.Assert.*;
 
 @RunWith(MockitoJUnitRunner.class)
+@SpringBootTest
 public class StudentRepositoryTest {
 
     @InjectMocks
     private StudentRepository studentRepository;
 
-    @Before
-    public void setUp() {
-
+    @BeforeEach
+    void setUp() {
+        MockitoAnnotations.openMocks(this);
     }
 
     @Test
