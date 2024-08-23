@@ -13,7 +13,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.*;
 
 import java.util.ArrayList;
@@ -32,7 +31,7 @@ public class StudentServiceTest {
     private Student student;
 
     @BeforeEach
-    void setUp() {
+    public void setUp() {
         MockitoAnnotations.openMocks(this);
         student = new Student("Nikhil", "Sharma", "ZEM123", "1234567890", 85.5, 'M', "nikhil@zemoso.com");
     }
@@ -55,7 +54,7 @@ public class StudentServiceTest {
         assertEquals(student, result.get(0));
         verify(studentRepository, times(1)).findAll();
     }
-    
+
 
     @Test
     public void testRemoveStudentById() {

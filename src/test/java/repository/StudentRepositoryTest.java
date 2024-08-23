@@ -22,7 +22,7 @@ public class StudentRepositoryTest {
     private StudentRepository studentRepository;
 
     @BeforeEach
-    void setUp() {
+    public void setUp() {
         MockitoAnnotations.openMocks(this);
     }
 
