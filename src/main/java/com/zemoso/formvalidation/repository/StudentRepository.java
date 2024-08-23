@@ -11,7 +11,7 @@ public class StudentRepository implements iStudentRepository{
     private final List<Student> students = new ArrayList<>();
 
     StudentRepository(){
-        students.add(new Student("Nikhil", "Sharma", "ZEMruis", "1234567890", 55.69, 'M', "nikhil@zemoso.com"));
+        students.add(new Student("Nikhil", "Sharma", "ZEMrui", "1234567890", 55.69, 'M', "nikhil@zemoso.com"));
     }
 
     @Override
