@@ -170,6 +170,12 @@
                                 <goals>
                                     <goal>report</goal>
                                 </goals>
+                                <configuration>
+                                    <excludes>
+                                        <exclude>com/zemoso/formvalidation/validation/**</exclude>
+                                        <exclude>com/zemoso/formvalidation/model/**</exclude>
+                                    </excludes>
+                                </configuration>
                             </execution>
                         </executions>
                     </plugin>

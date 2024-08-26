@@ -1,11 +1,8 @@
 package com.zemoso.formvalidation.services;
 
-import com.zemoso.formvalidation.config.AppConfig;
 import com.zemoso.formvalidation.model.Student;
 import com.zemoso.formvalidation.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
