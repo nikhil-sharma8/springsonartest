@@ -3,7 +3,6 @@ package controller;
 import com.zemoso.formvalidation.controller.HomeController;
 import com.zemoso.formvalidation.model.Student;
 import com.zemoso.formvalidation.services.StudentService;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.runner.RunWith;
@@ -12,7 +11,6 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 
 import java.util.Collections;
 
@@ -28,8 +26,6 @@ public class HomeControllerTest {
     @Mock
     private Model model;
 
-    @Mock
-    private BindingResult bindingResult;
 
     @InjectMocks
     private HomeController homeController;
