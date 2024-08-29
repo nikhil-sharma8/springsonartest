@@ -13,7 +13,7 @@
         <sonar.projectKey>nikhilzemoso_springsonartest</sonar.projectKey>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <sonar.exclusions>**/com/zemoso/formvalidation/model/**, **/com/zemoso/formvalidation/validation/**, **/com/zemoso/formvalidation/controller/HomeController/submitForm.java</sonar.exclusions>
+        <sonar.exclusions>**/com/zemoso/formvalidation/model/**, **/com/zemoso/formvalidation/validation/**</sonar.exclusions>
     </properties>
     <dependencies>
       <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->

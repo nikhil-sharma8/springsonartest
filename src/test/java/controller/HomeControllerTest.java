@@ -11,6 +11,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 
 import java.util.Collections;
 
@@ -22,6 +23,8 @@ public class HomeControllerTest {
 
     @Mock
     private StudentService studentService;
+    @Mock
+    private BindingResult bindingResult;
 
     @Mock
     private Model model;
@@ -61,5 +64,31 @@ public class HomeControllerTest {
     public void testRedirectToStudentList() {
         String viewName = homeController.redirectToStudentList();
         assertEquals("redirect:/studentList", viewName);
+    }
+
+
+    @Test
+    public void testSubmitForm_WithErrors() {
+        Student student = new Student();
+        when(bindingResult.hasErrors()).thenReturn(true);
+
+
+        String viewName = homeController.submitForm(student, bindingResult, model);
+
+        assertEquals("studentForm", viewName);
+        verify(studentService, never()).registerStudent(any(Student.class));
+        verify(model, never()).addAttribute(eq("message"), anyString());
+    }
+
+    @Test
+    public void testSubmitForm_NoErrors() {
+        Student student = new Student();
+        when(bindingResult.hasErrors()).thenReturn(false);
+
+        String viewName = homeController.submitForm(student, bindingResult, model);
+
+        assertEquals("success", viewName);
+        verify(studentService, times(1)).registerStudent(student);
+        verify(model, times(1)).addAttribute("message", "Registration successful!");
     }
 }
